@@ -1,0 +1,69 @@
+<!DOCTYPE HTML>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>undefined</title>
+        <style>
+            @font-face{
+                font-family: "f";
+                src: url("No.283-ShangShouWuShiTi-2.ttf");
+            }
+            *{
+                margin: 0;
+                padding: 0;
+            }
+            body{
+                width: 100vw;
+                height: 100vh;
+                overflow: hidden;
+                background: url("index.jpg");
+                background-size: cover;
+                display: flex;
+                flex-direction: column;
+                /* justify-content: center; */
+                align-items: center;
+            }
+            h1{
+                font-family: "宋体";
+                font-size: 60px;
+            }
+            h1:nth-child(1){
+                margin-top: 25vh;
+                /* font-family: "a"; */
+                font-family: "a";
+            }
+            h1:nth-child(2){
+                margin-top: 10vh;
+                font-size: 40px;
+                font-family: "f";
+                font-size: 80px;
+            }
+            h1:nth-child(3){
+                margin-top: 15vh;
+                font-size: 30px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1></h1>
+        <h1></h1>
+        <h1></h1>
+        <script>
+            const li=decodeURI(window.location.search);
+            // console.log(li);
+            // const name=li[6:];
+            const _ = li.slice(6,);
+            // console.log(_);
+            const zhu = ["新年新气象，愿你的生活充满欢笑和喜悦，幸福安康伴你左右！","金猪送福来，愿你在新的一年里事业有成，家庭美满，万事如意！","春风送暖入屠苏，新年到，愿你心想事成，步步高升！","新年钟声响，愿你的每一天都如同这钟声一样，充满希望和活力！","红红火火过大年，愿你的新年充满热情，生活红火，好运连连！","新年新希望，愿你的梦想在新的一年里一一实现，前程似锦！","春回大地，万象更新，愿你在新的一年里，健康快乐，福星高照！","新年新征程，愿你勇敢追梦，不畏艰难，收获满满！","金猪报喜，愿你在新的一年里，财源滚滚，幸福满满，笑口常开！","新年新开始，愿你把握每一个美好瞬间，让生活更加精彩，新年快乐！"];
+            const _zhu = ["一帆风顺","万事如意","财源广进","喜气洋洋","身体健康","福寿安康","龙马精神","笑口常开","心想事成","步步高升"];
+            document.querySelectorAll("h1")[0].innerText = `祝${_}新年快乐`;
+            function getRandomItem(array) {
+                const randomIndex = Math.floor(Math.random() * array.length);
+                return array[randomIndex];
+            }
+            document.querySelectorAll("h1")[1].innerText = getRandomItem(_zhu);
+            document.querySelectorAll("H1")[2].innerText = getRandomItem(zhu);
+        </script>
+    </body>
+</html>
