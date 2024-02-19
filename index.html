@@ -1,0 +1,83 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>新春快乐</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            display: flex;
+            width: 100vw;
+            height: 100vh;
+            overflow: hidden;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        h1{
+            user-select: none;
+        }
+        input{
+            width: 20vw;
+            margin-top: 13vh;
+            outline: none;
+            border: none;
+            border-bottom: 1px solid #000000;
+            font-family: "微软雅黑";
+            font-weight: bold;
+            font-size: 25px;
+            height: 15vh;
+            line-height: 15vh;
+            text-align: center;
+        }
+        button{
+            width: 10vw;
+            height: 7vh;
+            background-color: #ffffff;
+            border-radius: 10px;
+            border: 1px solid #000000;
+            font-size: 25px;
+            font-family: "微软雅黑";
+            font-weight: bold;
+            margin-top: 30px;
+            cursor: pointer;
+        }
+        button:hover{
+            background-color: #eeeeee;
+        }
+        h6{
+            display: none;
+            margin-top: 5px;
+            color: #ff0000;
+        }
+    </style>
+</head>
+<body>
+    <audio src="./a.mp3" loop autoplay></audio>
+    <h1>请输入你的姓名</h1>
+    <h6>姓名无效</h6>
+    <input type="text">
+    <button>确定</button>
+    <script>
+        document.querySelector("button").onclick = ()=>{
+            _name = document.querySelector("input").value;
+            if (_name){
+                a(_name);
+                document.querySelector("h6").style.display = "none";
+            }
+            else{
+                // console.log(7);
+                document.querySelector("h6").style.display = "block";
+                
+            }
+        }
+        function a(str){
+            window.open(`./look.html?name=${encodeURI(str)}`,name="_self");
+        }
+    </script>
+</body>
+</html>
